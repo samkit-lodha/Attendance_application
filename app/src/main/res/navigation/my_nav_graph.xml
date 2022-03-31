@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/facultyFeaturesFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.attendanceapplication.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login"
+        app:startDestination="@id/action_loginFragment_to_adminFeatureFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_adminFeatureFragment"
+            app:destination="@id/adminFeatureFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_facultyFeaturesFragment"
+            app:destination="@id/facultyFeaturesFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_studentFeatureFragment"
+            app:destination="@id/studentFeatureFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminFeatureFragment"
+        android:name="com.example.attendanceapplication.AdminFeatureFragment"
+        android:label="fragment_admin_feature"
+        tools:layout="@layout/fragment_admin_feature" >
+        <action
+            android:id="@+id/action_adminFeatureFragment_to_userAddFragment"
+            app:destination="@id/userAddFragment"
+            app:popUpTo="@id/adminFeatureFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_adminFeatureFragment_to_adminUserAddFragment"
+            app:destination="@id/adminUserAddFragment"
+            app:popUpTo="@id/adminFeatureFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_adminFeatureFragment_to_facultyUserAddFragment"
+            app:destination="@id/facultyUserAddFragment"
+            app:popUpTo="@id/adminFeatureFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_adminFeatureFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/userAddFragment"
+        android:name="com.example.attendanceapplication.UserAddFragment"
+        android:label="fragment_user_add"
+        tools:layout="@layout/fragment_user_add" >
+        <argument
+            android:name="delOrRem"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_userAddFragment_to_adminFeatureFragment"
+            app:destination="@id/adminFeatureFragment"
+            app:popUpTo="@id/adminFeatureFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminUserAddFragment"
+        android:name="com.example.attendanceapplication.AdminUserAddFragment"
+        android:label="fragment_admin_user_add"
+        tools:layout="@layout/fragment_admin_user_add" >
+        <argument
+            android:name="delOrRem"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_adminUserAddFragment_to_adminFeatureFragment"
+            app:destination="@id/adminFeatureFragment"
+            app:popUpTo="@id/adminFeatureFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/facultyUserAddFragment"
+        android:name="com.example.attendanceapplication.FacultyUserAddFragment"
+        android:label="fragment_faculty_user_add"
+        tools:layout="@layout/fragment_faculty_user_add" >
+        <argument
+            android:name="delOrRem"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_facultyUserAddFragment_to_adminFeatureFragment"
+            app:destination="@id/adminFeatureFragment"
+            app:popUpTo="@id/adminFeatureFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCourseFragment"
+        android:name="com.example.attendanceapplication.AddCourseFragment"
+        android:label="fragment_add_course"
+        tools:layout="@layout/fragment_add_course" >
+        <action
+            android:id="@+id/action_addCourseFragment_to_facultyFeaturesFragment"
+            app:destination="@id/facultyFeaturesFragment"
+            app:popUpTo="@id/facultyFeaturesFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/facultyFeaturesFragment"
+        android:name="com.example.attendanceapplication.FacultyFeaturesFragment"
+        android:label="fragment_faculty_features"
+        tools:layout="@layout/fragment_faculty_features"
+        app:startDestination="@id/action_facultyFeaturesFragment_to_loginFragment">
+        <action
+            android:id="@+id/action_facultyFeaturesFragment_to_addCourseFragment"
+            app:destination="@id/addCourseFragment"
+            app:popUpTo="@id/facultyFeaturesFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_facultyFeaturesFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_facultyFeaturesFragment_to_attendanceDataSetterFragment"
+            app:destination="@id/attendanceDataSetterFragment" />
+        <action
+            android:id="@+id/action_facultyFeaturesFragment_to_courseAttendanceDateSelectionFragment"
+            app:destination="@id/courseAttendanceDateSelectionFragment" />
+        <action
+            android:id="@+id/action_facultyFeaturesFragment_to_courseOverallDateSetterFragment"
+            app:destination="@id/courseOverallDateSetterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentFeatureFragment"
+        android:name="com.example.attendanceapplication.StudentFeatureFragment"
+        android:label="fragment_student_feature"
+        tools:layout="@layout/fragment_student_feature" >
+        <action
+            android:id="@+id/action_studentFeatureFragment_to_courseEnrollmentFragment"
+            app:destination="@id/courseEnrollmentFragment" />
+        <action
+            android:id="@+id/action_studentFeatureFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_studentFeatureFragment_to_studentAttendanceForCoursesFragment"
+            app:destination="@id/studentAttendanceForCoursesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseEnrollmentFragment"
+        android:name="com.example.attendanceapplication.CourseEnrollmentFragment"
+        android:label="fragment_course_enrollment"
+        tools:layout="@layout/fragment_course_enrollment" >
+        <action
+            android:id="@+id/action_courseEnrollmentFragment_to_courseEnrollListFragment"
+            app:destination="@id/courseEnrollListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseEnrollListFragment"
+        android:name="com.example.attendanceapplication.CourseEnrollListFragment"
+        android:label="fragment_course_enroll_list"
+        tools:layout="@layout/fragment_course_enroll_list" >
+        <argument
+            android:name="department"
+            app:argType="string" />
+        <argument
+            android:name="semester"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/attendanceDataSetterFragment"
+        android:name="com.example.attendanceapplication.AttendanceDataSetterFragment"
+        android:label="fragment_attendance_data_setter"
+        tools:layout="@layout/fragment_attendance_data_setter" >
+        <action
+            android:id="@+id/action_attendanceDataSetterFragment_to_attendanceListFragment"
+            app:destination="@id/attendanceListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/attendanceListFragment"
+        android:name="com.example.attendanceapplication.AttendanceListFragment"
+        android:label="fragment_attendance_list"
+        tools:layout="@layout/fragment_attendance_list" >
+        <argument
+            android:name="department"
+            app:argType="string" />
+        <argument
+            android:name="semester"
+            app:argType="string" />
+        <argument
+            android:name="course"
+            app:argType="string" />
+        <argument
+            android:name="date"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_attendanceListFragment_to_facultyFeaturesFragment"
+            app:destination="@id/facultyFeaturesFragment"
+            app:popUpTo="@id/facultyFeaturesFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentAttendanceForCoursesFragment"
+        android:name="com.example.attendanceapplication.StudentAttendanceForCoursesFragment"
+        android:label="fragment_student_attendance_for_courses"
+        tools:layout="@layout/fragment_student_attendance_for_courses" >
+        <action
+            android:id="@+id/action_studentAttendanceForCoursesFragment_to_studentRecordFragment"
+            app:destination="@id/studentRecordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentRecordFragment"
+        android:name="com.example.attendanceapplication.StudentRecordFragment"
+        android:label="fragment_student_record"
+        tools:layout="@layout/fragment_student_record" >
+        <argument
+            android:name="cPA"
+            app:argType="com.example.attendanceapplication.Models.CoursePandAStats" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseAttendanceDateSelectionFragment"
+        android:name="com.example.attendanceapplication.CourseAttendanceDateSelectionFragment"
+        android:label="CourseAttendanceDateSelectionFragment" >
+        <action
+            android:id="@+id/action_courseAttendanceDateSelectionFragment_to_attendanceViewerFragment"
+            app:destination="@id/attendanceViewerFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/attendanceViewerFragment"
+        android:name="com.example.attendanceapplication.AttendanceViewerFragment"
+        android:label="AttendanceViewerFragment" >
+        <argument
+            android:name="aFTD"
+            app:argType="com.example.attendanceapplication.Models.AttendanceForTheDay" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseOverallDateSetterFragment"
+        android:name="com.example.attendanceapplication.CourseOverallDateSetterFragment"
+        android:label="fragment_course_overall_date_setter"
+        tools:layout="@layout/fragment_course_overall_date_setter" >
+        <action
+            android:id="@+id/action_courseOverallDateSetterFragment_to_overallStatsFragment"
+            app:destination="@id/overallStatsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/overallStatsFragment"
+        android:name="com.example.attendanceapplication.OverallStatsFragment"
+        android:label="fragment_overall_stats"
+        tools:layout="@layout/fragment_overall_stats" >
+        <argument
+            android:name="uidFin"
+            app:argType="string" />
+    </fragment>
+</navigation>

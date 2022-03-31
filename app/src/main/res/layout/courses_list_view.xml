@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="#4F454444">
+
+    <TextView
+        android:id="@+id/courseTextView"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:maxLines="3"
+        android:layout_margin="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        tools:text="EEL301 Electrical Drivers and Circuits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center_vertical"
+        android:clickable="true"
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

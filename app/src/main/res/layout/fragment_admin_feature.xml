@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vnit_image_entrance"
+        tools:context=".AdminFeatureFragment">
+
+        <LinearLayout
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/custom_linear_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/addStudentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4F454444"
+                android:text="Add Student"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:layout_editor_absoluteX="137dp"
+                tools:layout_editor_absoluteY="221dp" />
+
+            <Button
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/removeStudentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4F454444"
+                android:text="Remove Student"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:layout_editor_absoluteX="137dp"
+                tools:layout_editor_absoluteY="221dp" />
+
+            <Button
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/addFacultyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4F454444"
+                android:text="Add Faculty"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:layout_editor_absoluteX="137dp"
+                tools:layout_editor_absoluteY="221dp" />
+
+            <Button
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/removeFacultyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4F454444"
+                android:text="Remove Faculty"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:layout_editor_absoluteX="137dp"
+                tools:layout_editor_absoluteY="221dp" />
+
+            <Button
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/addAdminButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4F454444"
+                android:text="Add Admin"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:layout_editor_absoluteX="137dp"
+                tools:layout_editor_absoluteY="221dp" />
+
+            <Button
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/removeAdminButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4F454444"
+                android:text="Remove Admin"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:layout_editor_absoluteX="137dp"
+                tools:layout_editor_absoluteY="221dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
